@@ -1,0 +1,145 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Overall background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1a1a1a; /* Dark background for a gaming feel */
+    color: #fff; /* White text for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('your-background-image.jpg'); /* Optional background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Container for the whole content */
+#downloads {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px; /* Adjust for mobile */
+    margin: 0 auto;
+}
+
+/* Heading */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Gaming yellow */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* File block */
+.file {
+    margin-bottom: 15px;
+}
+
+/* Labels and buttons */
+label, button {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #ffcc00;
+}
+
+/* Password input field */
+input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #ffcc00;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+input[type="password"]:focus {
+    outline: none;
+    border-color: #ff6600;
+}
+
+/* Submit button */
+button {
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff6600;
+}
+
+/* Hide the download link initially */
+a {
+    display: none;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    color: #ffcc00;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #ff6600;
+}
+
+/* Image styles for each file */
+.file img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Add a neon glow effect to the file name */
+h3 {
+    font-size: 22px;
+    color: #ffcc00;
+    text-shadow: 0 0 15px rgba(255, 204, 0, 0.8), 0 0 30px rgba(255, 204, 0, 0.6);
+    margin-top: 20px;
+}
+
+/* Additional mobile responsiveness */
+@media (max-width: 600px) {
+    #downloads {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    input[type="password"], button {
+        font-size: 14px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}

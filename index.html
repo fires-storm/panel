@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Downloads</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+
+    <div id="downloads">
+        <h3>Fire Storm Gaming</h3>
+
+        <div id="file1" class="file">
+            <img src="cXtDNsM393w-SD.jpg" alt=""> <br>
+            <label for="passwordFile1">Password for panel 1:</label>
+            <input type="password" id="passwordFile1" placeholder="Enter password for File 1" required>
+            <button onclick="checkPassword('file1')">Submit</button>
+            <a id="linkFile1" href="https://mega.nz/file/LNom3b5Y#Z88oTGfgPli9y9SEZ-iqwNcnU0R54FTUwFklFyqB4Eg" download style="display:none;">Download File 1</a>
+        </div>
+
+        <div id="file2" class="file">
+            <img src="-gBQOuXHhZg-HD.jpg" alt="">
+            <label for="passwordFile2">Password for panel 2:</label>
+            <input type="password" id="passwordFile2" placeholder="Enter password for File 2" required>
+            <button onclick="checkPassword('file2')">Submit</button>
+            <a id="linkFile2" href="https://mega.nz/file/OAx1BLqB#AA1HnMa2L1lQnHF1gWvtivU-a5ZNbBp-e6ufX7NsBRc" download style="display:none;">Download File 2</a>
+        </div>
+
+        <div id="file3" class="file">
+            <img src="QBWfDNlpc5Y-SD (1).jpg" alt="">
+            <label for="passwordFile3">Password for panel 3:</label>
+            <input type="password" id="passwordFile3" placeholder="Enter password for File 3" required>
+            <button onclick="checkPassword('file3')">Submit</button>
+            <a id="linkFile3" href="https://mega.nz/file/OAx1BLqB#AA1HnMa2L1lQnHF1gWvtivU-a5ZNbBp-e6ufX7NsBRc" download style="display:none;">Download File 3</a>
+        </div>
+    </div>
+
+    <script>
+        // Set different passwords for each file
+        const passwords = {
+            file1: "1",
+            file2: "2",
+            file3: "3"
+        };
+
+        function checkPassword(file) {
+            const inputPassword = document.getElementById(`password${file.charAt(0).toUpperCase() + file.slice(1)}`).value;
+            const link = document.getElementById(`link${file.charAt(0).toUpperCase() + file.slice(1)}`);
+
+            if (inputPassword === passwords[file]) {
+                link.style.display = 'block';
+                document.getElementById(file).querySelector('button').disabled = true;
+                document.getElementById(file).querySelector('input').disabled = true;
+                alert('Correct password! You can now download the file.');
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

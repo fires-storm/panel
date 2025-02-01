@@ -25,6 +25,7 @@ body {
 #downloads {
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     padding: 20px;
+     height: 173vh;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     width: 100%;
